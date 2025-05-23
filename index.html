@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Элементы</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./images/icon-img.ico" type="image/x-icon">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body class="body-reset">
+
+  <div class="body-blind body-blind--set"></div>
+
+  <header class="header header--size container">
+    <div class="header__box">
+
+      <div class="header__burger burger burger--set">
+
+        <button class="burger__open-btn btn-reset" type="button" aria-label="Открыть меню">
+          <svg class="burger__open-btn-svg" width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="2"/>
+            <rect y="8" width="20" height="2"/>
+            <rect y="16" width="10" height="2"/>
+          </svg>
+        </button>
+
+        <div class="burger__box">
+            <button class="burger__close-btn btn-reset" type="button" aria-label="Закрыть меню">
+              <svg class="burger__btn-close-svg" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="9"/>
+                <rect x="5.58643" y="4.95001" width="10.8" height="0.9" transform="rotate(45 5.58643 4.95001)" fill="#FFF"/>
+                <rect x="5.03223" y="12.5869" width="10.8" height="0.9" transform="rotate(-45 5.03223 12.5869)" fill="#FFF"/>
+              </svg>
+            </button>
+
+            <nav class="burger__nav nav">
+              <ul class="nav__list list-reset">
+                <li class="nav__item">
+                  <a class="nav__link link-reset" href="#id-hero">Элементы</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link link-reset" href="#id-drop">Выпадающие списки</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link link-reset" href="#id-inputs">Инпуты</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link link-reset" href="#id-mix">Чекбоксы и радио-кнопки</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link link-reset" href="#id-accordion">Аккордион</a>
+                </li>
+              </ul>
+            </nav>
+
+        </div>
+
+      </div>
+
+      <div class="header__logo-wrap">
+        <a class="header__logo-link" href="#">
+          <img class="header__logo-img img-max" src="./images/logo-img.png" alt="Логотип Элементы">
+        </a>
+      </div>
+
+      <nav class="header__nav nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a class="nav__link link-reset" href="#id-hero">Элементы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link link-reset" href="#id-drop">Выпадающие списки</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link link-reset" href="#id-inputs">Инпуты</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link link-reset" href="#id-mix">Чекбоксы и радио-кнопки</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link link-reset" href="#id-accordion">Аккордион</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero hero--set" id="id-hero">
+      <h1 class="hero__title">Элементы</h1>
+      <p class="hero__descr">
+        Представленные элементы созданы без использования библиотек.
+        Всё сделано &laquo;своими руками&raquo;.
+      </p>
+    </section>
+
+    <section class="drop drop--set" id="id-drop">
+      <h2 class="drop__title">Выпадающие списки</h2>
+
+      <ul class="drop__list list-reset">
+        <li class="drop__list-item" id="id-drop__list-item-1">
+          <h3 class="drop__list-item-title">Выпадающий список с заголовком</h3>
+          <div class="drop__list-item-wrapper">
+            <p class="drop__list-item-descr">
+              При загрузке страницы в шапке выпадающего списка отображается категория.
+            </p>
+            <div class="drop__list-item-box"></div>
+            <span class="drop__list-item-change">On Change:</span>
+            <span class="drop__list-item-value">Значение:</span>
+            <button class="drop__list-item-btn btn-reset mango-btn" type="button">
+              Обновить значение
+            </button>
+          </div>
+        </li>
+        <li class="drop__list-item" id="id-drop__list-item-2">
+          <h3 class="drop__list-item-title">Выпадающий список без заголовка</h3>
+          <div class="drop__list-item-wrapper">
+            <p class="drop__list-item-descr">
+              В шапке выпадающего списка не отображается категория.
+            </p>
+            <div class="drop__list-item-box"></div>
+            <span class="drop__list-item-change">On Change:</span>
+            <span class="drop__list-item-value">Значение:</span>
+            <button class="drop__list-item-btn btn-reset mango-btn" type="button">
+              Обновить значение
+            </button>
+          </div>
+        </li>
+        <li class="drop__list-item" id="id-drop__list-item-3">
+          <h3 class="drop__list-item-title">Выпадающий список - чек</h3>
+          <div class="drop__list-item-wrapper">
+            <p class="drop__list-item-descr">
+              Выпадающий список в шапке которого отображается категория.
+              При раскрытии списка можно изменить выбор.
+            </p>
+            <div class="drop__list-item-box"></div>
+            <span class="drop__list-item-change">On Change:</span>
+            <span class="drop__list-item-value">Значение:</span>
+            <button class="drop__list-item-btn btn-reset mango-btn" type="button">
+              Обновить значение
+            </button>
+          </div>
+        </li>
+        <li class="drop__list-item" id="id-drop__list-item-4">
+          <h3 class="drop__list-item-title">Выпадающий список - вверх</h3>
+          <div class="drop__list-item-wrapper">
+            <p class="drop__list-item-descr">
+              В шапке выпадающего списка не отображается категория.
+              Меню раскрывается вверх.
+            </p>
+            <div class="drop__list-item-box"></div>
+            <span class="drop__list-item-change">On Change:</span>
+            <span class="drop__list-item-value">Значение:</span>
+            <button class="drop__list-item-btn btn-reset mango-btn" type="button">
+              Обновить значение
+            </button>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="inputs inputs--set" id="id-inputs">
+      <h2 class="inputs__title">Инпуты</h2>
+
+      <ul class="inputs__list list-reset">
+        <li class="inputs__list-item" id="id-inputs__list-item-1">
+          <h3 class="inputs__list-item-title">Инпут автодополнение</h3>
+          <div class="inputs__list-item-wrapper">
+            <p class="inputs__list-item-descr">
+              В&nbsp;поле ввода необходимо ввести название города.
+              Автодополнение предлагает пользователю варианты.
+              Допускается вводить буквы русского алфавита,
+              дефис и&nbsp;пробел.
+            </p>
+            <form class="inputs__list-item-form form-drop" id="id-form-1" autocomplete="off" novalidate>
+              <div class="form-drop__box-input" id="id-form-box-input-1">
+                <input class="form-drop__input" id="id-form-input-1" type="text" autocomplete="off">
+              </div>
+
+              <button class="form-drop__btn btn-reset mango-btn" id="id-form-btn-1" type="button">
+                Обновить значение
+              </button>
+            </form>
+            <p class="inputs__list-item-descr">
+              Редактированное значение&nbsp;&mdash; исправление на&nbsp;предмет
+              удаление не&nbsp;нужных символов и&nbsp;коррекции заглавных букв.
+            </p>
+            <span class="inputs__list-item-value-title">Значение:</span>
+            <span class="inputs__list-item-value"></span>
+            <span class="inputs__list-item-value-correct-title">Редактированное:</span>
+            <span class="inputs__list-item-value-correct">Нет</span>
+            <span class="inputs__list-item-change-title">On Change:</span>
+            <span class="inputs__list-item-change"></span>
+          </div>
+        </li>
+
+        <li class="inputs__list-item" id="id-inputs__list-item-2">
+          <h3 class="inputs__list-item-title">Инпут автодополнение</h3>
+          <div class="inputs__list-item-wrapper">
+            <p class="inputs__list-item-descr">
+              В&nbsp;поле ввода необходимо ввести название факультета.
+              Автодополнение предлагает пользователю варианты.
+              Допускается вводить буквы русского алфавита,
+              дефис и&nbsp;пробел.
+            </p>
+            <form class="inputs__list-item-form form-drop" id="id-form-2" autocomplete="off" novalidate>
+              <div class="form-drop__box-input" id="id-form-box-input-2">
+                <input class="form-drop__input" id="id-form-input-2" type="text" autocomplete="off">
+              </div>
+
+              <button class="form-drop__btn btn-reset mango-btn" id="id-form-btn-2" type="button">
+                Обновить значение
+              </button>
+            </form>
+            <p class="inputs__list-item-descr">
+              Редактированное значение&nbsp;&mdash; исправление на&nbsp;предмет
+              удаление не&nbsp;нужных символов и&nbsp;коррекции заглавных букв.
+            </p>
+            <span class="inputs__list-item-value-title">Значение:</span>
+            <span class="inputs__list-item-value"></span>
+            <span class="inputs__list-item-value-correct-title">Редактированное:</span>
+            <span class="inputs__list-item-value-correct"></span>
+            <span class="inputs__list-item-change-title">On Change:</span>
+            <span class="inputs__list-item-change"></span>
+          </div>
+        </li>
+
+        <li class="inputs__list-item" id="id-inputs__list-item-3">
+          <h3 class="inputs__list-item-title">Регистрация</h3>
+          <div class="inputs__list-item-wrapper">
+            <p class="inputs__list-item-descr">
+              В&nbsp;поле Email и&nbsp;Пароль можно ввести только определённые символы.
+              Email должен соответствовать формату почты.
+              Пароль не&nbsp;менее 6&nbsp;символов и&nbsp;содержать цифры, спецсимволы и
+              буквы латинского алфавита.
+              Кнопка Регистрация становится активной при соблюдении
+              всех условий.
+            </p>
+            <form class="form-login form-login--set" id="id-form-login" autocomplete="off" novalidate>
+              <h4 class="form-login__title">Регистрация на сайте</h4>
+
+              <div class="form-login__box-inputs" id="id-form-login-box-inputs">
+                <div class="form-login__box-input">
+                  <span class="form-login__input-title">Email</span>
+                  <input class="form-login__input" type="text" name="login" id="id-login-input" data-error="id-login-error" data-success="id-login-success">
+                  <span class="form-login__span-error" id="id-login-error">Ошибка заполнения</span>
+                  <span class="form-login__span-success" id="id-login-success">Заполнено</span>
+                </div>
+                <div class="form-login__box-input">
+                  <span class="form-login__input-title">Пароль</span>
+                  <input class="form-login__input" type="password" name="password" id="id-password-input" data-error="id-password-error" data-success="id-password-success">
+                  <span class="form-login__span-error" id="id-password-error">Ошибка заполнения</span>
+                  <span class="form-login__span-success" id="id-password-success">Заполнено</span>
+
+                  <button class="form-login__btn-eye btn-reset" id="id-btn-eye" type="button" aria-label="Показать пароль">
+                    <svg class="form-login__img-eye" id="id-open-eye" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 9C10.358 9 9 10.359 9 12C9 13.642 10.358 15 12 15C13.641 15 15 13.642 15 12C15 10.359 13.641 9 12 9Z"/>
+                      <path d="M12 5C4.408 5 2.12632 11.617 2.10543 11.684L2 12L2.10444 12.316C2.12632 12.383 4.408 19 12 19C19.592 19 21.8737 12.383 21.8946 12.316L22 12L21.8956 11.684C21.8737 11.617 19.592 5 12 5ZM12 17C6.67774 17 4.61587 13.154 4.11657 12C4.61786 10.842 6.68072 7 12 7C17.3223 7 19.3841 10.846 19.8834 12C19.3821 13.158 17.3193 17 12 17Z"/>
+                    </svg>
+                    <svg class="form-login__img-eye" id="id-close-eye" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.41246 3.00177L21.3813 19.9706L21.3831 19.9689L21.3848 19.9706L19.9706 21.3848L16.6137 18.028C15.3568 18.6142 13.8332 19 12 19C4.408 19 2.12632 12.383 2.10444 12.316L2 12L2.10543 11.684C2.11863 11.6417 3.03404 8.98544 5.62047 7.0347L3 4.41423L4.41246 3.00177ZM15.0867 16.5009L13.2895 14.7037C12.8976 14.8934 12.4599 15 12 15C10.358 15 9 13.642 9 12C9 11.5401 9.10665 11.1024 9.29631 10.7105L7.03632 8.45055C5.26898 9.66594 4.41537 11.3098 4.11657 12C4.61587 13.154 6.67774 17 12 17C13.184 17 14.2067 16.8097 15.0867 16.5009Z"/>
+                      <path d="M9.50022 5.2611C10.2611 5.09454 11.0926 5.00002 12 5.00002C19.592 5.00002 21.8737 11.617 21.8956 11.684L22 12L21.8946 12.316C21.8843 12.349 21.3248 13.9731 19.8511 15.6119L18.4594 14.2203C19.2458 13.3296 19.6859 12.4564 19.8834 12C19.3841 10.846 17.3223 7.00002 12 7.00002C11.7475 7.00002 11.5024 7.00867 11.2644 7.02529L9.50022 5.2611Z"/>
+                    </svg>
+                  </button>
+
+                </div>
+              </div>
+
+              <div class="form-login__box-btn">
+                <button class="form-login__btn btn-reset mango-btn" type="button" id="id-form-login-btn" disabled>
+                  Регистрация
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <li class="inputs__list-item" id="id-inputs__list-item-4">
+          <h3 class="inputs__list-item-title">Подписка</h3>
+          <div class="inputs__list-item-wrapper">
+            <p class="inputs__list-item-descr">
+              Необходимо заполнить правильно поля с&nbsp;email,
+              именем и&nbsp;фамилией. Последнее поле не&nbsp;обязательно.
+              Валидация происходит при нажатии на&nbsp;кнопку Продолжиить.
+            </p>
+            <form class="form-subs form-subs--set" id="id-form-subs" autocomplete="off" novalidate>
+              <h4 class="form-subs__title">Подписка на рекламу</h4>
+
+              <div class="form-subs__box-inputs" id="id-form-subs-box-inputs">
+                <div class="form-subs__box-input">
+                  <input class="form-subs__input" type="text" name="subs-email" id="id-input-subs-email" data-error="id-subs-email-error" placeholder=" ">
+                  <label class="form-subs__label" for="id-input-subs-email" id="id-label-subs-email">Email<i>*</i></label>
+                  <span class="form-subs__span-help">Обязательно для заполнения</span>
+                  <span class="form-subs__span-error" id="id-subs-email-error">Ошибка заполнения</span>
+                </div>
+                <div class="form-subs__box-input">
+                  <input class="form-subs__input" type="text" name="subs-name" id="id-input-subs-name" data-error="id-subs-name-error" placeholder=" ">
+                  <label class="form-subs__label" for="id-input-subs-name" id="id-label-subs-name">Имя<i>*</i></label>
+                  <span class="form-subs__span-help">Обязательно для заполнения</span>
+                  <span class="form-subs__span-error" id="id-subs-name-error">Ошибка заполнения</span>
+                </div>
+                <div class="form-subs__box-input">
+                  <input class="form-subs__input" type="text" name="subs-surname" id="id-input-subs-surname" data-error="id-subs-surname-error" placeholder=" ">
+                  <label class="form-subs__label" for="id-input-subs-surname" id="id-label-subs-surname">Фамилия</label>
+                  <span class="form-subs__span-help">Не обязательно для заполнения</span>
+                  <span class="form-subs__span-error" id="id-subs-surname-error">Ошибка заполнения</span>
+                </div>
+              </div>
+
+              <div class="form-subs__box-btn">
+                <button class="form-subs__btn btn-reset mango-btn" type="button" id="id-form-subs-btn">
+                  Продолжить
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mix mix--set" id="id-mix">
+      <h2 class="mix__title">Чекбоксы и радио-кнопки</h2>
+
+      <ul class="mix__list list-reset">
+        <li class="mix__list-item">
+          <h3 class="mix__list-item-title">Чекбоксы обычные</h3>
+          <div class="mix__list-item-wrapper">
+            <p class="mix__list-item-descr">
+              Можно выбрать один, несколько или все варианты.
+              Кроме недоступных по&nbsp;умолчанию чекбоксов серого цвета.
+              &laquo;Галочка&raquo; отмечает выбранный вариант.
+            </p>
+            <form class="mix__list-form" id="id-mix-list-form-11" autocomplete="off" novalidate>
+              <fieldset class="mix__list-form-fieldset mix__list-form-fieldset-padding">
+                <legend class="mix__list-form-legend">Животные</legend>
+
+                <div class="checkbox checkbox--set">
+                  <input class="checkbox__input visually-hidden" id="input-check-1" type="checkbox" aria-label="Кошка">
+                  <label class="checkbox__label" for="input-check-1">Кошка</label>
+                </div>
+                <div class="checkbox checkbox--set">
+                  <input class="checkbox__input visually-hidden" id="input-check-2" type="checkbox" aria-label="Собака">
+                  <label class="checkbox__label" for="input-check-2">Собака</label>
+                </div>
+                <div class="checkbox checkbox--set">
+                  <input class="checkbox__input visually-hidden" id="input-check-3" type="checkbox" aria-label="Ёж">
+                  <label class="checkbox__label" for="input-check-3">Ёж</label>
+                </div>
+                <div class="checkbox checkbox--set">
+                  <input class="checkbox__input visually-hidden" id="input-check-4" type="checkbox" disabled aria-label="Лиса">
+                  <label class="checkbox__label" for="input-check-4">Лиса</label>
+                </div>
+                <div class="checkbox checkbox--set">
+                  <input class="checkbox__input visually-hidden" id="input-check-5" type="checkbox" checked disabled aria-label="Волк">
+                  <label class="checkbox__label" for="input-check-5">Волк</label>
+                </div>
+              </fieldset>
+
+              <div class="mix__list-form-box-btn">
+                <button class="mix__list-form-btn btn-reset mango-btn" id="id-mix-list-form-btn-11" type="button">
+                  Обновить
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <li class="mix__list-item">
+          <h3 class="mix__list-item-title">Чекбоксы кнопки</h3>
+          <div class="mix__list-item-wrapper">
+            <p class="mix__list-item-descr">
+              Можно выбрать один, несколько или все варианты.
+              Кроме недоступных по&nbsp;умолчанию чекбоксов серого цвета.
+              Вместо &laquo;галочки&raquo; выбранный вариант выделяется зелёным цветом.
+            </p>
+            <form class="mix__list-form" id="id-mix-list-form-12" autocomplete="off" novalidate>
+              <fieldset class="mix__list-form-fieldset mix__list-form-fieldset--flex" >
+                <legend class="mix__list-form-legend">Растения</legend>
+
+                <label class="checkbox-btn checkbox-btn--set">
+                  <input class="checkbox-btn__input visually-hidden" id="input-check-btn-1" type="checkbox" aria-label="Кактус">
+                  <span class="checkbox-btn__btn">Кактус</span>
+                </label>
+                <label class="checkbox-btn checkbox-btn--set">
+                  <input class="checkbox-btn__input visually-hidden" id="input-check-btn-2" type="checkbox" aria-label="Фикус">
+                  <span class="checkbox-btn__btn">Фикус</span>
+                </label>
+                <label class="checkbox-btn checkbox-btn--set">
+                  <input class="checkbox-btn__input visually-hidden" id="input-check-btn-3" type="checkbox" aria-label="Орхидея">
+                  <span class="checkbox-btn__btn">Орхидея</span>
+                </label>
+                <label class="checkbox-btn checkbox-btn--set">
+                  <input class="checkbox-btn__input visually-hidden" id="input-check-btn-4" type="checkbox" disabled aria-label="Камыш">
+                  <span class="checkbox-btn__btn">Камыш</span>
+                </label>
+                <label class="checkbox-btn checkbox-btn--set">
+                  <input class="checkbox-btn__input visually-hidden" id="input-check-btn-5" type="checkbox" disabled checked aria-label="Лиана">
+                  <span class="checkbox-btn__btn">Лиана</span>
+                </label>
+              </fieldset>
+
+              <div class="mix__list-form-box-btn">
+                <button class="mix__list-form-btn btn-reset mango-btn" id="id-mix-list-form-btn-12" type="button">
+                  Обновить
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <li class="mix__list-item">
+          <h3 class="mix__list-item-title">Радио-кнопки 1</h3>
+          <div class="mix__list-item-wrapper">
+            <p class="mix__list-item-descr">
+              Можно выбрать только один вариант.
+              Радио-кнопки серого цвета недоступны по&nbsp;умолчанию.
+              &laquo;Точка&raquo; отмечает выбранный вариант.
+            </p>
+            <form class="mix__list-form" id="id-mix-list-form-21" autocomplete="off" novalidate>
+              <fieldset class="mix__list-form-fieldset mix__list-form-fieldset-padding">
+                <legend class="mix__list-form-legend">Птицы</legend>
+
+                <div class="radio radio--set">
+                  <input class="radio__input visually-hidden" id="id-input-radio-1" type="radio" name="birds" aria-label="Сова">
+                  <label class="radio__label" for="id-input-radio-1">Сова</label>
+                </div>
+                <div class="radio radio--set">
+                  <input class="radio__input visually-hidden" id="id-input-radio-2" type="radio" name="birds" aria-label="Филин">
+                  <label class="radio__label" for="id-input-radio-2">Филин</label>
+                </div>
+                <div class="radio radio--set">
+                  <input class="radio__input visually-hidden" id="id-input-radio-3" type="radio" name="birds" aria-label="Воробей">
+                  <label class="radio__label" for="id-input-radio-3">Воробей</label>
+                </div>
+                <div class="radio radio--set">
+                  <input class="radio__input visually-hidden" id="id-input-radio-4" type="radio" name="birds" aria-label="Кукушка" disabled>
+                  <label class="radio__label" for="id-input-radio-4">Кукушка</label>
+                </div>
+                <div class="radio radio--set">
+                  <input class="radio__input visually-hidden" id="id-input-radio-5" type="radio" name="birds" aria-label="Орёл" checked disabled>
+                  <label class="radio__label" for="id-input-radio-5">Орёл</label>
+                </div>
+              </fieldset>
+
+              <div class="mix__list-form-box-btn">
+                <button class="mix__list-form-btn btn-reset mango-btn" id="id-mix-list-form-btn-21" type="button">
+                  Обновить
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <li class="mix__list-item">
+          <h3 class="mix__list-item-title">Радио-кнопки 2</h3>
+          <div class="mix__list-item-wrapper">
+            <p class="mix__list-item-descr">
+              Можно выбрать только один вариант.
+              Радио-кнопки серого цвета недоступны по&nbsp;умолчанию.
+              Вместо &laquo;точки&raquo; выбранный вариант выделяется зелёным цветом.
+            </p>
+            <form class="mix__list-form" id="id-mix-list-form-22" autocomplete="off" novalidate>
+              <fieldset class="mix__list-form-fieldset mix__list-form-fieldset--flex">
+                <legend class="mix__list-form-legend">Здания</legend>
+
+                <label class="radio-btn radio-btn--set">
+                  <input class="radio-btn__input visually-hidden" id="id-radio-btn-1" type="radio" name="buildings" aria-label="Дом">
+                  <span class="radio-btn__btn">Дом</span>
+                </label>
+                <label class="radio-btn radio-btn--set">
+                  <input class="radio-btn__input visually-hidden" id="id-radio-btn-2" type="radio" name="buildings" aria-label="Дача">
+                  <span class="radio-btn__btn">Дача</span>
+                </label>
+                <label class="radio-btn radio-btn--set">
+                  <input class="radio-btn__input visually-hidden" id="id-radio-btn-3" type="radio" name="buildings" aria-label="Театр">
+                  <span class="radio-btn__btn">Театр</span>
+                </label>
+                <label class="radio-btn radio-btn--set">
+                  <input class="radio-btn__input visually-hidden" id="id-radio-btn-4" type="radio" name="buildings" disabled aria-label="Магазин">
+                  <span class="radio-btn__btn">Магазин</span>
+                </label>
+                <label class="radio-btn radio-btn--set">
+                  <input class="radio-btn__input visually-hidden" id="id-radio-btn-5" type="radio" name="buildings" disabled checked aria-label="Шалаш">
+                  <span class="radio-btn__btn">Шалаш</span>
+                </label>
+              </fieldset>
+
+              <div class="mix__list-form-box-btn">
+                <button class="mix__list-form-btn btn-reset mango-btn" id="id-mix-list-form-btn-22" type="button">
+                  Обновить
+                </button>
+              </div>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="accordion accordion--set" id="id-accordion">
+      <h2 class="accordion__title">Аккордион</h2>
+      <ul class="accordion__list list-reset">
+        <li class="accordion__list-item">
+          <h3 class="accordion__list-item-title">Аккордион 1</h3>
+          <div class="accordion__list-item-wrapper">
+            <p class="accordion__list-item-descr">
+              Можно открыть только один заголовок.
+            </p>
+
+            <div class="accordion__wrapper">
+              <ul class="accordion__accordion-list list-reset accordion-1">
+
+                <li class="accordion__panel">
+                  <div class="accordion__panel-header">
+                    <h3 class="accordion__panel-header-title">
+                      Птицы
+                    </h3>
+                    <button class="accordion__panel-header-btn btn-reset">
+                      <svg class="accordion__panel-header-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__panel-content">
+                    <p class="accordion__panel-content-text">
+                      Птицы&nbsp;&mdash; теплокровные позвоночные животные,
+                      передние конечности которых превратились в&nbsp;крылья,
+                      а&nbsp;тело покрыто перьями. Большинство видов птиц приспособлено к&nbsp;полёту.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="accordion__panel">
+                  <div class="accordion__panel-header">
+                    <h3 class="accordion__panel-header-title">
+                      Змеи
+                    </h3>
+                    <button class="accordion__panel-header-btn btn-reset">
+                      <svg class="accordion__panel-header-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__panel-content">
+                    <p class="accordion__panel-content-text">
+                      Змеи&nbsp;&mdash; группа пресмыкающихся животных, характеризующихся длинным телом без конечностей.
+                      Обычно имеют длинные и&nbsp;гибкие тела, покрытые чешуйками, являются хищниками, питающимися мелкими животными.
+                      Змеи могут быть ядовитыми или неядовитыми, их&nbsp;размеры и&nbsp;внешний вид могут сильно различаться в&nbsp;зависимости от&nbsp;вида.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="accordion__panel">
+                  <div class="accordion__panel-header">
+                    <h3 class="accordion__panel-header-title">
+                      Рыбы
+                    </h3>
+                    <button class="accordion__panel-header-btn btn-reset">
+                      <svg class="accordion__panel-header-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__panel-content">
+                    <p class="accordion__panel-content-text">
+                      Рыбы&nbsp;&mdash; водные позвоночные животные. Они широко распространены по&nbsp;планете,
+                      обитают в&nbsp;пресных и&nbsp;солёных водоёмах, заселяя всю толщу от&nbsp;поверхности до&nbsp;глубин.
+                      Известно более 35&nbsp;тыс. видов рыб.
+                    </p>
+                    <p class="accordion__panel-content-text">
+                      Большинство рыб имеют обтекаемую форму тела, они хорошие пловцы.
+                      Тело состоит из&nbsp;головы, туловища и&nbsp;хвоста.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </li>
+
+        <li class="accordion__list-item">
+          <h3 class="accordion__list-item-title">Аккордион 2</h3>
+          <div class="accordion__list-item-wrapper">
+            <p class="accordion__list-item-descr">
+              Можно открыть не один заголовок.
+            </p>
+
+            <div class="accordion__wrapper">
+              <ul class="accordion__accordion-list list-reset accordion-2">
+
+                <li class="accordion__panel">
+                  <div class="accordion__panel-header">
+                    <h3 class="accordion__panel-header-title">
+                      Берёза
+                    </h3>
+                    <button class="accordion__panel-header-btn btn-reset">
+                      <svg class="accordion__panel-header-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__panel-content">
+                    <p class="accordion__panel-content-text">
+                      Береза&nbsp;&mdash; одно из&nbsp;самых узнаваемых деревьев рода лиственных.
+                      Для дерева характерна белая кора с&nbsp;черными вкраплениями, а&nbsp;также небольшие заостренные листы и&nbsp;развесистая крона.
+                      Средняя продолжительность жизни березы в&nbsp;естественных условиях составляет около 150&nbsp;лет.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="accordion__panel">
+                  <div class="accordion__panel-header">
+                    <h3 class="accordion__panel-header-title">
+                      Сосна
+                    </h3>
+                    <button class="accordion__panel-header-btn btn-reset">
+                      <svg class="accordion__panel-header-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__panel-content">
+                    <p class="accordion__panel-content-text">
+                      Сосна&nbsp;&mdash; прекрасный представитель семейства хвойных.
+                      Дерево максимально приспособлено к&nbsp;неблагоприятным условиям среды и&nbsp;легко выдержит засуху,
+                      морозы, недостаток света и&nbsp;любую почву.
+                      Большинство сосен имеют раскидистую крону. Сильно развитая корневая система.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="accordion__panel">
+                  <div class="accordion__panel-header">
+                    <h3 class="accordion__panel-header-title">
+                      Ель
+                    </h3>
+                    <button class="accordion__panel-header-btn btn-reset">
+                      <svg class="accordion__panel-header-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="accordion__panel-content">
+                    <p class="accordion__panel-content-text">
+                      Ель&nbsp;&mdash; высокорослое дерево, может превышать 30&nbsp;метров в&nbsp;высоту.
+                      Средняя длительность жизни елки составляет около 500&nbsp;лет.
+                      Прочность древесины и&nbsp;высокая теплоотдача елки позволяет применять растение в&nbsp;промышленных целях.
+                      Размножается растение при помощи семян, которые располагаются внутри небольших яйцевидных шишек.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer class="footer footer--size container">
+
+    <nav class="footer__nav nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a class="nav__link link-reset" href="#id-hero">Элементы</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link-reset" href="#id-drop">Выпадающие списки</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link-reset" href="#id-inputs">Инпуты</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link-reset" href="#id-mix">Чекбоксы и радио-кнопки</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link link-reset" href="#id-accordion">Аккордион</a>
+        </li>
+      </ul>
+    </nav>
+
+  </footer>
+
+</body>
+</html>

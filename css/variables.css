@@ -1,0 +1,73 @@
+/* ============================================ */
+/* ============= variables ==================== */
+/* ============================================ */
+
+:root {
+  --wite-zero: #FFF;
+  --black-zero: #000;
+
+  --background-light: #E9E9E9;
+  --background-grey: #E5E5E5;
+
+  --grey-light: #DAC6C6;
+  --grey-medium: #BCBCBC;
+  --grey-bold: #808080;
+
+  --black-light: #999;
+  --black-normal: #666;
+  --black-medium: #333;
+  --black-bold: #212133;
+
+  --black-medium-1: #414141;
+  --black-medium-2: #4A4A4A;
+  --black-medium-3: #2E2B44;
+  --black-medium-4: #202020;
+
+  --red-light: #FFD4C1;
+  --red-medium-1: #F06666;
+  --red-medium-2: #F06A4D;
+  --red-bold-1: #FF3030;
+  --red-bold-2: #EE2F2F;
+  --red-bold-3: #D11616;
+
+  --mango-light: #ECA485;
+  --mango-medium: #E7926E;
+  --mango-bold: #EB8154;
+
+  --mango: #FF6E30;
+  --brown: #BC572B;
+  --brown-bold: #742f12;
+  --orange-1: #E6B127;
+  --orange-2: #CE4307;
+
+  --blue-light: #26A5E4;
+  --blue-medium: #3F2AFF;
+
+  --primary: #116ACC;
+  --primary-2: #457bb4;
+  --primary-3: #054486;
+  --primary-4: #70aff3;
+  --primary-5: #8EC1F7;
+  --primary-6: #A0C3FF;
+  --primary-7: #C4D5F1;
+
+  --violet-light: #D1A9F0;
+  --violet-medium: #C283F3;
+  --violet-bold: #9D5CD0;
+  --violet-zero: #7943A4;
+
+  --firm-1: #B89EFF;
+  --firm-2: #9873FF;
+  --firm-3: #7B61FF;
+  --firm-4: #8052FF;
+
+  --green-zero: #c8eea2;
+  --green-light: #97EE3F;
+  --green-medium: #34C759;
+
+  --info: #A0C3FF;
+  --success: #76CA66;
+  --success-2: #26a70c;
+  --warning: #FBC756;
+  --error: #BA0000;
+}

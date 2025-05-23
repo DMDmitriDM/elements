@@ -1,0 +1,106 @@
+/* dropdown */
+
+.dropdown {
+  --grey-light: #DAC6C6;
+  --grey-medium: #BCBCBC;
+  --grey-bold: #808080;
+  --black-medium: #333;
+}
+
+.dropdown {
+  position: relative;
+  width: 123px;
+  user-select: none;
+}
+
+/* toggle */
+
+.dropdown__toggle {
+  position: relative;
+  border: 1px solid var(--grey-bold);
+  width: 100%;
+  padding: 12px 11px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--black-medium);
+  text-align: left;
+  background-color: var(--grey-light);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown__toggle::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  width: 12px;
+  height: 12px;
+  background-image: url("./images/angle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  margin-top: -2.5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown--open .dropdown__toggle:before {
+  transform: rotate(-180deg);
+}
+
+.dropdown__toggle:focus,
+.dropdown__toggle:hover,
+.dropdown__toggle:active {
+  background-color: var(--grey-medium);
+  color: var(--black-medium);
+  outline: none;
+}
+
+/* menu */
+
+.dropdown__menu {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid var(--grey-bold);
+  border-top: none;
+  width: 100%;
+  background-color: var(--grey-light);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: 0 0;
+  transform: scaleY(0);
+  transition: opacity 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out, transform 0.3s linear;
+}
+
+.dropdown__menu.dropdown__menu--open {
+  pointer-events: auto;
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown__item {
+  padding: 10px 11px;
+  width: 100%;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--black-medium);
+  background-color: var(--grey-light);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown__item:focus,
+.dropdown__item:hover,
+.dropdown__item:active {
+  background-color: var(--grey-medium);
+  color: var(--black-medium);
+  outline: none;
+}

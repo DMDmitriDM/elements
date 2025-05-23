@@ -1,0 +1,118 @@
+/* accordion */
+
+.accordion__list {
+  --grey-bold: #808080;
+  --mango-bold: #EB8154;
+  --brown: #BC572B;
+}
+
+.accordion__panel {
+  position: relative;
+  border: 1px solid var(--grey-bold);
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.accordion__panel:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.accordion__panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.accordion__panel-header-title {
+  margin: 0;
+}
+
+.accordion__panel-header-btn {
+  padding-top: 4px;
+  width: 24px;
+  height: 28px;
+  outline: none;
+}
+
+.accordion__panel-header-btn::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion__panel-header-svg {
+  fill: var(--grey-bold);
+  transform: rotate(0deg);
+  transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* --- */
+
+.accordion__panel-header-btn:focus {
+  outline: none;
+}
+
+.accordion__panel:focus-within {
+  border-color: var(--mango-bold);
+}
+
+.accordion__panel:focus-within .accordion__panel-header-svg {
+  fill: rgb(236, 134, 51);
+}
+
+@media (hover: hover) {
+  .accordion__panel:hover {
+    border-color: var(--mango-bold);
+  }
+
+  .accordion__panel:hover .accordion__panel-header-svg {
+    fill: var(--mango-bold);
+  }
+}
+
+.accordion__panel:active {
+  border-color: var(--brown);
+}
+
+.accordion__panel:active .accordion__panel-header-svg {
+  fill: var(--brown);
+}
+
+/* --- */
+
+.accordion__panel-content-text {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+/* показать - скрыть */
+
+.accordion__panel-content {
+  overflow: hidden;
+  height: 0;
+  transform: translateY(0px);
+  visibility: hidden;
+  opacity: 0;
+
+  transition-property: height, transform, visibility, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: linear;
+}
+
+.accordion__panel--open .accordion__panel-content {
+  height: auto;
+  transform: translateY(-10px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.accordion__panel--open .accordion__panel-header-svg {
+  transform: rotate(180deg);
+}

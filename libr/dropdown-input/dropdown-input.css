@@ -1,0 +1,100 @@
+.visually-hidden-auto {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.input-auto-box {
+  --top-before: 8px;
+  --grey-light: #DAC6C6;
+  --grey-medium: #BCBCBC;
+  --grey-bold: #808080;
+  --red-light: #f3bfb6;
+  --black-medium: #333;
+}
+
+.input-auto-box {
+  position: relative;
+}
+
+.input-auto-box::before {
+  content: "";
+  position: absolute;
+  top: var(--top-before);
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  background-image: url("./images/angle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.input-auto-box--open.input-auto-box::before {
+  transform: rotate(-180deg);
+}
+
+.input-auto-input {
+  width: 100%;
+}
+
+/* ----- */
+
+.input-auto-menu {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--grey-bold);
+  border-top: none;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: var(--red-light);
+  user-select: none;
+  pointer-events: none;
+  transform-origin: center top;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: opacity 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out, transform 0.3s linear;
+}
+
+.input-auto-menu--open {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+/* ----- */
+
+.input-auto-menu-item {
+  display: none;
+  padding: 5px 8px;
+  width: 100%;
+  text-align: center;
+  color: var(--black-medium);
+  background-color: var(--grey-light);
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.input-auto-menu-item--open {
+  display: block;
+}
+
+.input-auto-menu-item:focus,
+.input-auto-menu-item:hover,
+.input-auto-menu-item:active {
+  background-color: var(--grey-medium);
+  outline: none;
+}
